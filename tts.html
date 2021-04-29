@@ -73,5 +73,46 @@
 
     </div>
 
+    <hr>
+    <h2>TTS model with alignment loss for rythm disentanglement</h1>    
+      <h4>Training data</h4>
+      <table border="1">
+        <tr>
+          <th>Samples</th><th>LJS [slowed down]</th><th>Michelle [speeded up]</th>          
+	    </tr>
+
+        <tr>
+            <td> training data </td>
+            <td><audio controls style="width: 300px;"><source src="./toy/LJ001-0004.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./toy/Becoming01.0002.wav"></audio></td>
+
+        </tr>
+        
+      </table>
+      
+      <table border="1">
+        <tr>
+          <th>Speaker</th><th>fast rythm</th><th>slow rythm</th>
+	    </tr>
+	    <tr>
+            <td>LJS</td>
+            <td><audio controls style="width: 300px;"><source src="./toy/ljs_fast.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./toy/ljs_slow.wav"></audio></td>
+        </tr>
+	    <tr>
+            <td>Michelle</td>
+            <td><audio controls style="width: 300px;"><source src="./toy/mo_fast.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./toy/mo_slow.wav"></audio></td>
+        </tr>	    
+
+
+        
+      </table>      
+
+    
   </body>
 </html>
+
+<!--
+<th>Samples</th><th>LJS(spkID=0) [slow down(rythmID=0)]</th><th>Michelle(spkID=1) [speed up(rythmID=1)]</th>
+-->
