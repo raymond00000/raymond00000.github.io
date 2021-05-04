@@ -79,7 +79,7 @@
       
     <hr>
     <h2>TTS model with alignment loss from augmented data for rhythm disentanglement</h1>    
-      <h4>Training data</h4>
+      <h4>Toy Training data</h4>
       <table border="1">
         <tr>
           <th>Samples</th><th>LJS [slowed down]</th><th>Michelle [speeded up]</th>          
@@ -119,7 +119,51 @@
         
       </table>      
 
-    
+
+      <p></p><p></p></br></br>
+      <h4>Sample audio in the dataset</h4>
+      <table border="1">
+        <tr>
+          <th>Michelle</th><th>news</th><th>story</th><th>speech</th>
+	    </tr>
+
+        <tr>
+            <td><audio controls style="width: 300px;"><source src="./samples/Becoming01.0002.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./samples/160908.0001.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./samples/audiobook_fls_Aamids_Badv_Cyou_Dmp3_00006.0006.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./samples/segment3_0033.0002.wav"></audio></td>
+        </tr>
+        
+      </table>
+      <p></p><p></p></br></br>
+      
+      <h4>Sythesized audio on Michelle's voice</h4>
+      <table border="1">
+        <tr>
+          <th>Michelle</th><th>news</th><th>story</th><th>speech</th>
+	    </tr>
+
+        <tr>
+            <td>original voice</td>        
+            <td><audio controls style="width: 300px;"><source src="./samples/mo_news_2.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./samples/mo_st2_2.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./samples/mo_speech_2.wav"></audio></td>
+        </tr>        
+        
+        <tr>
+            <td>with style</td>        
+            <td><audio controls style="width: 300px;"><source src="./samples/mo_news.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./samples/mo_st2.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./samples/mo_speech.wav"></audio></td>
+        </tr>
+
+
+
+        
+      </table>
+      
+
+      
   </body>
 </html>
 
