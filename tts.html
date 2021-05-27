@@ -105,7 +105,8 @@
 
       
     <hr>
-    <h2>TTS model with alignment loss from augmented data for rhythm disentanglement</h1>    
+    <h2>TTS model with alignment loss from augmented data for style mimicking  </h1>    
+    <p>Rhythm played a key role in the perception of stylish speech. </p></br></br>
       <h3>Toy Training data</h3>
       <table border="1">
         <tr>
@@ -121,9 +122,7 @@
         
       </table>
 
-      <p></p>
-      <p></p>
-      </br></br>
+
       
       <p>Text: "And Badger did, for he knew of a secret tunnel that would take them right into Toad Hall."</p>
 
@@ -146,7 +145,7 @@
         
       </table>      
 
-
+      <p></p><p></p></br></br>
       <p></p><p></p></br></br>
       <h3>Sample audio in the training dataset</h3>
       <table border="1">
@@ -162,7 +161,7 @@
         </tr>
         
       </table>
-      <p></p><p></p></br></br>
+
       
       <h4>Sythesized audio on Michelle's voice with style</h4>
       <table border="1">
@@ -183,13 +182,52 @@
             <td><audio controls style="width: 300px;"><source src="./3spkali/mo_st2.wav"></audio></td>
             <td><audio controls style="width: 300px;"><source src="./3spkali/mo_speech.wav"></audio></td>
         </tr>
-
-
-
-        
+       
       </table>
       
+      <h4>Sythesized audio on Hillary's voice with style</h4>
+      <table border="1">
+        <tr>
+          <th>Hillary</th><th>news's unseen text</th><th>story's unseen text</th><th>speech's unseen text</th>
+	    </tr>
 
+        <tr>
+            <td>neutral voice</td>        
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/hill_t8_s2.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/hill_t1_s2.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/hill_t4_s2.wav"></audio></td>
+        </tr>        
+        
+        <tr>
+            <td>with style</td>        
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/hill_t8_s8.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/hill_t1_s1.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/hill_t4_s4.wav"></audio></td>
+        </tr>
+       
+      </table>
+
+      <h4>Sythesized audio on VOA's voice with style</h4>
+      <table border="1">
+        <tr>
+          <th>VOA</th><th>news's unseen text</th><th>story's unseen text</th><th>speech's unseen text</th>
+	    </tr>
+
+        <tr>
+            <td>neutral voice</td>        
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/voa_t8_s2.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/voa_t1_s2.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/voa_t4_s2.wav"></audio></td>
+        </tr>        
+        
+        <tr>
+            <td>with style</td>        
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/voa_t8_s8.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/voa_t1_s1.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./5spkaliword/voa_t4_s4.wav"></audio></td>
+        </tr>
+       
+      </table>
       
   </body>
 </html>
