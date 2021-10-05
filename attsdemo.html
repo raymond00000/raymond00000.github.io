@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="google-site-verification" content="ftFOlJETX-2KNjaPh8W6s8lhigItRuu9fOmjHZZ0nY0">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="Accent%20Conversion%20Using%20Reference%20Encoder_files/bootstrap.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Accent Conversion</title>
+<style type="text/css">
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  audio {
+    width: 100%;
+  }
+
+  thead>tr>th:first-child {
+    width: 96px;
+  }
+
+  @media (max-width: 767px) {
+    .big-screen {
+      display: none;
+    }
+  }
+
+  @media (min-width: 767px) {
+    .small-screen {
+      display: none;
+    }
+  }
+p.normal {font-weight: normal}
+p.thick {font-weight: bold}
+p.thicker {font-weight: 900}
+</style></head>
+
+
+
+<body>
+  <header class="header">
+    <div class="jumbotron bg-secondary text-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <h1><a class="text-light">
+				 Accent beautified Text-to-speech Synthesis with data augmentation and phoneme prediction loss<br> </a></h1>
+            <p>
+      <b>Authors: Raymond Chung and Brian Mak</b><br>
+      <div class="row" id="monolingual">
+        <div class="col">
+          <h2>System</h2>
+          <div>
+		<p>baseline #1:  Wenjie Li, Benlai Tang, Xiang Yin, Yushi Zhao, Wei
+Li, Kang Wang, Hao Huang, Yuxuan Wang, and Zejun Ma, “Improving accent conversion with reference
+encoder and end-to-end text-to-speech,” arXiv preprint
+arXiv:2005.09271, 2020.</p>
+		<br>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row" id="result">
+        <div class="col-md-12">
+          <h2>Speech Samples</h2>
+          <p>FA: observed as strong foreign accent.
+          <br>NC: observed as less foreign accented.
+          
+		  </p>
+		  
+                  <div class="big-screen">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th class="text-center">Original</br> ZHAA</br>(FA)</th>
+                          <th class="text-center">LJS TTS </br> adapted to ZHAA </br>(FA)</th>                          
+                          <th class="text-center">LJS TTS</br></br>(LA)</th>
+			  <th class="text-center">Baseline#1</br></br>(LA)</th>
+			  <th class="text-center">Proposed model</br> on ZHAA</br>(LA)</th>
+			  <th class="text-center">Original</br> YKWK</br>(FA)</th>
+			  <th class="text-center">Proposed model</br> on YKWK</br>(LA)</th>
+                        </tr>
+                      </thead>
+                      <tbody>	      
+			  <tr>
+				<th scope="row"><font size="2">text</font></th>
+				<th colspan="6"><p class="normal">"The mob came on but it could not advance"</p></th>
+			  </tr>
+			  <tr style="vertical-align:top">
+                          <th scope="row"><font size="2">Sample 1</font></th>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/gt/1078.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs_2_zhaa/1078.wav" type="audio/wav">
+                            </audio>
+                          </td>                          
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs/1078.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/b1/1078.wav" type="audio/wav">
+                            </audio>
+                          </td>
+						  <td>
+                            <audio controls="controls">
+                              <source src="ac/dsda/1078.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk/1078.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                            <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk_dsda/1078.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                        </tr>
+						
+			<tr>
+				<th scope="row"><font size="2">text</font></th>
+				<th colspan="6"><p class="normal">"I remembered the red wine of the Italian rancho and shuddered inwardly"</p></th>
+			</tr>			
+			<tr style="vertical-align:top">
+                          <th scope="row"><font size="2">Sample 2</font></th>
+                           <td>
+                            <audio controls="controls">
+                              <source src="ac/gt/1091.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs_2_zhaa/1091.wav" type="audio/wav">
+                            </audio>
+                          </td>                          
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs/1091.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/b1/1091.wav" type="audio/wav">
+                            </audio>
+                          </td>
+						  <td>
+                            <audio controls="controls">
+                              <source src="ac/dsda/1091.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk/1091.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                            <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk_dsda/1091.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                        </tr>
+						
+			<tr>
+				<th scope="row"><font size="2">text</font></th>
+				<th colspan="6"><p class="normal">"You should have seen them when they heard me spitting chinook"</p></th>
+			</tr>			
+			<tr style="vertical-align:top">
+                          <th scope="row"><font size="2">Sample 3</font></th>
+                                                    <td>
+                            <audio controls="controls">
+                              <source src="ac/gt/1105.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs_2_zhaa/1105.wav" type="audio/wav">
+                            </audio>
+                          </td>                          
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs/1105.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/b1/1105.wav" type="audio/wav">
+                            </audio>
+                          </td>
+						  <td>
+                            <audio controls="controls">
+                              <source src="ac/dsda/1105.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk/1105.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                            <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk_dsda/1105.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                        </tr>
+						
+						
+			<tr>
+			<th scope="row"><font size="2">text</font></th>
+			<th colspan="6"><p class="normal">"Zilla relaxed her sour mouth long enough to sigh her satisfaction"</p></th>
+			</tr>
+			<tr style="vertical-align:top">
+                          <th scope="row"><font size="2">Sample 4</font></th>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/gt/1109.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs_2_zhaa/1109.wav" type="audio/wav">
+                            </audio>
+                          </td>                          
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs/1109.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/b1/1109.wav" type="audio/wav">
+                            </audio>
+                          </td>
+						  <td>
+                            <audio controls="controls">
+                              <source src="ac/dsda/1109.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk/1109.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                            <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk_dsda/1109.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                        </tr>
+	<tr>
+			<th scope="row"><font size="2">text</font></th>
+			<th colspan="6"><p class="normal">"Nor would it thaw out his hands and feet"</p></th>
+			</tr>
+			<tr style="vertical-align:top">
+                          <th scope="row"><font size="2">Sample 5</font></th>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/gt/1115.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs_2_zhaa/1115.wav" type="audio/wav">
+                            </audio>
+                          </td>                          
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs/1115.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/b1/1115.wav" type="audio/wav">
+                            </audio>
+                          </td>
+						  <td>
+                            <audio controls="controls">
+                              <source src="ac/dsda/1115.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk/1115.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                            <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk_dsda/1115.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                        </tr>
+			<tr><th scope="row"><font size="2">text</font></th>
+			<th colspan="6"><p class="normal">"Captain Doane's orders were swiftly obeyed"</p></th>
+			</tr>
+			<tr style="vertical-align:top">
+                          <th scope="row"><font size="2">Sample 6</font></th>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/gt/1121.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs_2_zhaa/1121.wav" type="audio/wav">
+                            </audio>
+                          </td>                          
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs/1121.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/b1/1121.wav" type="audio/wav">
+                            </audio>
+                          </td>
+						  <td>
+                            <audio controls="controls">
+                              <source src="ac/dsda/1121.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk/1121.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                            <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk_dsda/1121.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                        </tr>
+	<tr>
+			<th scope="row"><font size="2">text</font></th>
+			<th colspan="6"><p class="normal">"You were making them talk shop ruth charged him."</p></th>
+			</tr>
+			<tr style="vertical-align:top">
+                          <th scope="row"><font size="2">Sample 7</font></th>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/gt/1132.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs_2_zhaa/1132.wav" type="audio/wav">
+                            </audio>
+                          </td>                          
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs/1132.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/b1/1132.wav" type="audio/wav">
+                            </audio>
+                          </td>
+						  <td>
+                            <audio controls="controls">
+                              <source src="ac/dsda/1132.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk/1132.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                            <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk_dsda/1132.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                        </tr>
+
+						
+						
+			<tr>
+			<th scope="row"><font size="2">text</font></th>
+			<th colspan="6"><p class="normal">"The more his opponents grew excited the more Ernest deliberately excited them"</p></th>
+			</tr>			
+			<tr style="vertical-align:top">
+                          <th scope="row"><font size="2">Sample 8</font></th>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/gt/1053.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs_2_zhaa/1053.wav" type="audio/wav">
+                            </audio>
+                          </td>                          
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ljs/1053.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/b1/1053.wav" type="audio/wav">
+                            </audio>
+                          </td>
+						  <td>
+                            <audio controls="controls">
+                              <source src="ac/dsda/1053.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                          <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk/1053.wav" type="audio/wav">
+                            </audio>
+
+                          </td>
+                            <td>
+                            <audio controls="controls">
+                              <source src="ac/ykwk_dsda/1053.wav" type="audio/wav">
+                            </audio>
+                          </td>
+                        </tr>
+			 </tbody>
+                    </table>
+                  </div>
+      <hr>		  		  
+      
+</br></br></br></br></br></br></br>
+
+</body></html>
