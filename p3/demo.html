@@ -9,7 +9,7 @@
 
     <h2>Audio samples for "Cantonese neural speech synthesis from found newscasting video data and its speaker adaptation"</h1>
     <p>
-      <b>Authors: --- </b><br>
+      <b>Authors: Raymond Chung </b><br>
     </p>
 <p> All sentences below are unseen sentences to our TTS model. </p>
     <hr>
@@ -107,7 +107,25 @@
        
       </table>
       
+      <h4>Extra experiment: Poetry reading by Cantonese TTS</h4>
+<p> We collected 2 audio hours of classic Chinese poetry reading from YouTube. Then we applied the same speaker adaptation approach discussed in the paper.
+	We use this adapted voice to read Modern Chinese poetry. An example is provided below for your interest:
+	
+      <table border="1">
+        <tr>
+             <th style="width: 130px;">Groud-truth samples</th>
+	     <th>Proposed speaker adaptation TTS</th>
+	     <th>Microsoft's cloud TTS </th>
+	    </tr>
 
+        <tr>
+            <td><audio controls style="width: 300px;"><source src="./poem/poem_original_voice.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./poem/peom_reading_lscm.wav"></audio></td>
+            <td><audio controls style="width: 300px;"><source src="./poem/peom_reading_azure.wav"></audio></td>
+
+        </tr>     
+       
+      </table>
 
 </html>
 
